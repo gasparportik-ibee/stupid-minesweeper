@@ -16,6 +16,7 @@ function MineSweeper(width, height) {
     this.mineCount = 10;
     this.playing = false
     this.buttonsDown = 0;
+    this.debug = false;
     var self = this;
 
     this.checkWin = function () {
