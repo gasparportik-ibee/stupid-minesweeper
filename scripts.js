@@ -63,7 +63,7 @@ function MineSweeper(width, height) {
                 mf.push(elem);
                 var div = document.createElement("div");
                 div.id = i+","+j;
-                if (elem == 'mine') {
+                if (self.debug && elem == 'mine') {
                     div.style.borderColor = 'red';
                 }
 //                div.className = elem;
