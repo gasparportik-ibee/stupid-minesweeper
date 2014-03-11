@@ -6,12 +6,12 @@
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     </head>
 
-    <body oncontextmenu="return false">
+    <body>
         <div id="page">
             <div id="game">
                 <div class="header">
                     <div class="mineCount"></div>
-                    <div class="newGame"><a href="#" onclick="ms.newGame();return false;">NEW GAME</a></div>
+                    <div class="newGame"><a href="#" id="NewGameButtom">NEW GAME</a></div>
                     <div class="time"></div>
                 </div>
                 <div class="board">
@@ -27,6 +27,8 @@
 //                event.stopPropagation();
 //                return false;
 //            }
+            document.body.oncontextmenu = function (event) {event.preventDefault();};
+            document.getElementById('NewGameButtom').onclick = function () {window.ms.newGame();};
             window.ms = new MineSweeper(9,9);
         </script>
     </body>
