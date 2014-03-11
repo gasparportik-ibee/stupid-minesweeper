@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>Minesweeper</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <!-- Portik Gaspar, 531
+
+        a) Jelszó formátumának ellenőrzése.
+        Kérjünk be egy felhasználónevet és egy jelszónak szánt szöveget egy űrlapon (form) keresztül. Ellenőrizzük, hogy a begépelt jelszó teljesíti-e az alábbi feltételeket, és ha nem, írjuk ki, hogy mi az, ami nem felel meg:
+        - legalább egy számjegy kell szerepeljen benne (de ne csak számjegyekből álljon)vagy legyen benne nagy- és kisbetű is
+        - legyen legalább 6 karakter hosszúságú
+        - 10 karakternél hosszabb nem lehet
+        Az ellenőrizhetőség kedvéért írjuk ki apró betűkkel a beírt felhasználónevet és jelszót.
+
+        b) Mandelbrot halmaz
+        Jelenítsük meg a Mandelbrot halmazt (lehetőleg felismerhető paramétertartományban), természetesen nem képből betöltve, hanem javascriptben kiszámítva.
+
+        -->
+    </head>
+
+    <body oncontextmenu="return false">
+        <div id="page">
+            <div id="game">
+                <div class="header">
+                    <div class="mineCount"></div>
+                    <div class="newGame"><a href="#" onclick="ms.newGame();return false;">NEW GAME</a></div>
+                    <div class="time"></div>
+                </div>
+                <div class="board">
+                </div>
+                <div class="score"></div>
+            </div>
+        </div>
+        <script type="text/javascript" src="scripts.js"></script>
+        <script type="text/javascript">
+//            window.onmousedown = function(event) {
+//                event.preventDefault();
+//                event.preventBubble();
+//                event.stopPropagation();
+//                return false;
+//            }
+            window.ms = new MineSweeper(9,9);
+        </script>
+    </body>
+</html>
