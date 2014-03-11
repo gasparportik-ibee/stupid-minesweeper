@@ -1,0 +1,74 @@
+﻿/******************************************
+  Portik Gaspar, 531
+  Main stylesheet
+******************************************/
+
+html {
+    background-color: black;
+    height:100%;
+    overflow-y:scroll;
+}
+
+body {
+    height:100%;
+    margin:0;
+    padding:0;
+}
+
+div#page {
+    min-height:100%;
+    width:980px;
+    background-color:white;
+    margin:0 auto;
+    padding:10px 10px;
+}
+
+div#game {
+    background: #aaa;
+    min-width:300px;
+    padding:0px;
+    border:1px solid #aaa;
+    background:#DDD;
+    text-align:center;
+}
+
+div.board {
+    margin:0 auto;
+}
+
+div.board:after {
+    content:"";
+    display:block;
+    clear:both;
+}
+
+div.board > div {
+    float:left;
+    width:32px;
+    height:32px;
+    border-width: 2px;
+    border-style: solid;
+    border-color:#eee #ccc #ccc #eee;
+}
+div.board > div:active, div.board > div.visited, div.board > div.number {
+    border-color:#ccc #eee #eee #ccc;
+}
+div.board > div.mine {
+    background-image: url(bomb.jpg);
+}
+div.board > div.flag {
+    background-image: url(flag.jpg);
+}
+div.board > div.number {
+    color:blue;
+
+}
+div.board > div.number:after {
+    content:attr(data-number);
+}
+.score {
+    font-size:16px;
+    color:red;
+    font-weight: bold;
+    text-align:center;
+}
